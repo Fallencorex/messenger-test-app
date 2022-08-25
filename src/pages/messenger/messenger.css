@@ -1,0 +1,29 @@
+.messenger {
+    height: 100px;
+    display: flex;
+
+
+}
+
+.messengerContacts {
+    flex: 3.5;
+}
+
+.messengerTalk {
+    flex: 3.5;
+}
+
+.messengerContactsWrapper, .messengerTalksWrapper {
+    padding: 10px;
+    background-color: rgb(225, 225, 225);
+    height: 100%;
+}
+
+.messengerContactsSeacrh {
+    width: 90%;
+    padding: 10px 0;
+    border: black;
+    border-style: outset;
+    border-width: 0.5px;
+    border-radius: 12px 12px 12px 12px;
+}

@@ -1,0 +1,39 @@
+.talkAbout {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    color: rgb(255, 255, 255);
+}
+
+.talkAboutTop {
+    display: flex;
+
+}
+
+.talkAboutMessage {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 14px;
+    padding: 20px;
+    border-radius: 25px;
+    background-color: rgb(70, 40, 90);
+    color: rgb(255, 255, 255);
+    max-width: 500px;
+}
+
+.talkAboutImg {
+    padding: 20px;
+    width: 48px;
+    height:48px;
+    border-radius: 50%;
+    object-fit: cover;
+
+
+}
+
+.talkAboutDate {
+    padding-left: 100px;
+    margin-top: -10px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 14px;
+    color: rgb(150, 150, 150);
+}

@@ -1,29 +1,102 @@
+input:focus 
+{
+  outline:none;
+}
+
 .messenger {
-    height: 100px;
+    height: 700px;
+    width: 1300px;
     display: flex;
-
-
+    border-width: 5px;
+    border-style: double;
+    color: rgb(255, 0, 0);
 }
 
 .messengerContacts {
-    flex: 3.5;
+    width: 450px;
+    border-right-style: solid;
+    border-right-width: 2px;
+    color: rgb(200, 200, 200);
+    
 }
 
 .messengerTalk {
-    flex: 3.5;
+    width: 850px;
+  
 }
 
-.messengerContactsWrapper, .messengerTalksWrapper {
-    padding: 10px;
-    background-color: rgb(225, 225, 225);
-    height: 100%;
+.messengerDialogs {
+    padding: 5px;
+    padding-top: 25px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 24px;
+    color: rgb(0, 150, 255);
+    height: 50px;
+    background-color: rgb(255, 255, 255);
+}
+
+.messengerTalkBoxTop {
+    overflow-y: scroll;
+    background-color: rgb(255, 255, 255);
+    height: 500px;
+
+
+}
+.messengerTalkBoxBottom {
+    padding: 15px;
+
+}
+
+.messengerContactsWrapper, .messengerTalksWrapperTop, .messengerTalksWrapperBottom {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+    color: rgb(200, 200, 200);
+    background-color: rgb(235, 235, 235);
+}
+
+.messengerTalksWrapperBottom {
+    margin-top: 50px;
+    height: 90px;
+    border-top-style: solid;
+    border-top-width: 2px;
+    color: rgb(200, 200, 200);
 }
 
 .messengerContactsSeacrh {
     width: 90%;
-    padding: 10px 0;
-    border: black;
-    border-style: outset;
-    border-width: 0.5px;
+    padding: 10px;
+    border: rgb(200, 200, 200);
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 24px 24px 24px 24px;
+}
+
+.messengerInputTop {
+    margin-top: 5px;
+    display: flex;
+    border-style: solid;
+    border-width: 1.5px;
     border-radius: 12px 12px 12px 12px;
+    background-color: rgb(255, 255, 255);
+}
+
+.messengerTalkBoxInput {
+    padding: 15px;
+    margin-left: 10px;
+    border-style: none;
+    width: 725px;
+}
+
+.messengerTalkBoxButton {
+    background-color: rgba(0, 0, 0, 0);
+    width: 10%;
+    border: none;
+}
+
+.messengerSubmitImage {
+    cursor: pointer;
+    width: 40%;
+    height: 50%;
 }

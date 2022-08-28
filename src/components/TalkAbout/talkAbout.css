@@ -7,6 +7,9 @@
 
 .talkAboutTop {
     display: flex;
+    margin-top: 20px;
+    color: rgb(255, 255, 255);
+
 
 }
 
@@ -17,22 +20,54 @@
     border-radius: 25px;
     background-color: rgb(70, 40, 90);
     color: rgb(255, 255, 255);
-    max-width: 500px;
+    max-width: 300px;
+
 }
 
 .talkAboutImg {
     padding: 20px;
     width: 48px;
-    height:48px;
+    height: 48px;
     border-radius: 50%;
     object-fit: cover;
-
-
 }
 
 .talkAboutDate {
-    padding-left: 100px;
-    margin-top: -10px;
+    position: absolute;
+    padding-top: 100px;
+    margin-left: 100px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 14px;
+    color: rgb(150, 150, 150);
+}
+
+.talkAboutTop2 {
+    align-items: flex-end;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    color: rgb(255, 255, 255);
+}
+
+.talkAboutMessage2 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 14px;
+    padding: 20px;
+    margin-right: 10px;
+    border-radius: 25px;
+    background-color: rgb(200, 200, 200);
+    color: rgb(0, 0, 0);
+
+}
+
+.talkAboutImg2 {
+    width: 0px;
+    height: 0px;
+}
+
+.talkAboutDate2 {
+    display: flex;
+    align-items: flex-end;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 14px;
     color: rgb(150, 150, 150);

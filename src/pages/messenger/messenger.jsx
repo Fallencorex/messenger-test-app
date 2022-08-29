@@ -6,26 +6,66 @@ import { useEffect, useState } from "react";
 
 export default function Messenger() {
 
-    const [dialogs, setDialogs] = useState([]);
+    const [dialogs, setDialogs] = useState(historyDialogs);
     const [newMessage, setNewMessage] = useState("");
+    const [currentDialog, setCurrentDialog] = useState(0);
+    const [boolReq, setBoolReq] = useState(false);
+
 
     useEffect(() => {
-        setDialogs(historyDialogs);
-    })
-
-    const handleSubmit = (e) => {
-        const currentTime = new Date().toLocaleString();
-        const messa = {
-            imgUrl: './images/3.jpg',
-            text: newMessage,
-            date: String(currentTime.split('.').join('/')),
-            ownerMessage: '0'
+        if(boolReq) {
+        setBoolReq(false);
+        const checkPage = currentDialog;
+        
+        const fetchData = async (currentTime_, pushMessage_) => {
+            await fetch('https://api.chucknorris.io/jokes/random')
+              .then((response) => response.json())
+              .then((response) => {pushMessage_[checkPage]?.messages.push(sampleMessage(String(dialogs[checkPage]?.imgUrl), response.value, currentTime_, '1'))})
+              .then(()=> {setDialogs(pushMessage_);})
+              .catch((e) => console.error(e));
+              return () => clearTimeout(timer);
+          };
+      
+          const timer = setTimeout(() => {
+              const currentTime = new Date().toLocaleString();
+              const pushMessage = JSON.parse(JSON.stringify(dialogs));
+              fetchData(currentTime, pushMessage);
+            
+            console.log("Кол-во сообщений: " + dialogs[checkPage].messages.length);
+            console.log("Номер страницы " + checkPage);
+          }, 10000);
         }
 
+    },[boolReq])
+
+
+
+    function sampleMessage (imgUr, tex, currentTim, ownerMess) {
+        const messa = {
+            imgUrl: imgUr,
+            text: tex,
+            date: String(currentTim.split('.').join('/')),
+            ownerMessage: ownerMess
+        }
+        return messa;
+    }
+
+    const handleSubmit = () => {
+          const currentTime = new Date().toLocaleString();
+          const pushMessage = JSON.parse(JSON.stringify(dialogs));
+          pushMessage[currentDialog]?.messages.push(sampleMessage('', newMessage, currentTime, '0'));
+
+        setDialogs(pushMessage);
+        setNewMessage('');
+        setBoolReq(true);
         
-          dialogs[2]?.messages.push(messa);
-          setNewMessage("");
-        setDialogs(dialogs);
+            
+          
+
+    }
+
+   function changeDialog(elem) {
+        setCurrentDialog(elem.id-1);
     }
 
     return (
@@ -37,19 +77,20 @@ export default function Messenger() {
                 </div>
                 <div className="messengerDialogs"><span>Chats</span>
                 </div>
+                
                 {dialogs.map((elem) =>
+                <div onClick={()=> {changeDialog(elem)}}>
 
                     <Dialogs userImage={elem.imgUrl} userName={elem.name} />
+                    </div>
                 )}
-
-
             </div>
 
             <div className="messengerTalk">
                 <div className="messengerTalksWrapperTop"></div>
                 <div className="messengerTalkBoxTop">
                     {
-                        dialogs[2]?.messages?.map((elem) =>
+                        dialogs[currentDialog]?.messages?.map((elem) =>
                             <TalkAbout imgUr={elem.imgUrl} tex={elem.text} dat={elem.date} ownerMess={Boolean(Number(elem.ownerMessage))} />
                         )
                     }

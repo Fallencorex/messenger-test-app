@@ -44,7 +44,7 @@ export const historyDialogs = [
         ownerMessage: '1'
     },
     {
-        imgUrl: './images/3.jpg',
+        imgUrl: '',
         text: 'All right',
         date: '22/08/2020 22:15:02 PM',
         ownerMessage: '0'

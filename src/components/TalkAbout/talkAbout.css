@@ -8,8 +8,6 @@
     display: flex;
     margin-top: 20px;
     color: rgb(255, 255, 255);
-
-
 }
 
 .talkAboutMessage {
@@ -22,7 +20,6 @@
     background-color: rgb(70, 40, 90);
     color: rgb(255, 255, 255);
     max-width: 300px;
-
 }
 
 .talkAboutImg {
@@ -40,7 +37,7 @@
     color: rgb(150, 150, 150);
 }
 
-.talkAboutTop2 {
+.talkAboutTopOwner {
     align-items: flex-end;
     display: flex;
     flex-direction: column;
@@ -48,7 +45,7 @@
     color: rgb(255, 255, 255);
 }
 
-.talkAboutMessage2 {
+.talkAboutMessageOwner {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 14px;
     padding: 20px;
@@ -56,15 +53,14 @@
     border-radius: 25px;
     background-color: rgb(200, 200, 200);
     color: rgb(0, 0, 0);
-
 }
 
-.talkAboutImg2 {
+.talkAboutImgOwner {
     width: 0px;
     height: 0px;
 }
 
-.talkAboutDate2 {
+.talkAboutDateOwner {
     text-align: right;
     padding-right: 10px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;

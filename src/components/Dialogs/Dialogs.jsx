@@ -1,6 +1,5 @@
 import "./dialogs.css"
 
-
 export default function Dialogs({userImage, userName}) {
     return(
         <div className="dialogs">
@@ -10,7 +9,6 @@ export default function Dialogs({userImage, userName}) {
             <div className="timestamp"></div>
         </div>
     );
-
 }
 
 

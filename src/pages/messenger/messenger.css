@@ -7,22 +7,20 @@ input:focus
     height: 700px;
     width: 1300px;
     display: flex;
-    border-width: 5px;
-    border-style: double;
-    color: rgb(255, 0, 0);
+    border-width: 2px;
+    border-style: solid;
+    color: rgb(200, 200, 200);
 }
 
 .messengerContacts {
     width: 450px;
     border-right-style: solid;
     border-right-width: 2px;
-    color: rgb(200, 200, 200);
-    
+    color: rgb(200, 200, 200);  
 }
 
 .messengerTalk {
     width: 850px;
-  
 }
 
 .messengerDialogs {
@@ -39,12 +37,10 @@ input:focus
     overflow-y: scroll;
     background-color: rgb(255, 255, 255);
     height: 500px;
-
-
 }
+
 .messengerTalkBoxBottom {
     padding: 15px;
-
 }
 
 .messengerContactsWrapper, .messengerTalksWrapperTop, .messengerTalksWrapperBottom {
@@ -67,6 +63,7 @@ input:focus
 .messengerContactsSeacrh {
     width: 90%;
     padding: 10px;
+    margin-left: 10px;
     border: rgb(200, 200, 200);
     border-style: solid;
     border-width: 2px;
@@ -99,4 +96,13 @@ input:focus
     cursor: pointer;
     width: 40%;
     height: 50%;
+}
+
+.messengerOwnerImage, .messengerDialogImage {
+    padding: 5px;
+    margin-left: 10px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
 }

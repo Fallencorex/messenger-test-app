@@ -1,14 +1,13 @@
 import "./talkAbout.css"
 
-export default function talkAbout({imgUr, tex, dat, ownerMess}) {
+export default function talkAbout({imgUrl, text, date, ownerMessage}) {
     return(
         <div className="talkAbout">
-            <div className={ownerMess ? "talkAboutTop" : "talkAboutTop2"}>
-                <img className={ownerMess ? "talkAboutImg" : "talkAboutImg2"} src={imgUr} alt=""/>
-                <p className={ownerMess ? "talkAboutMessage" : "talkAboutMessage2"}>{tex}</p>
-                          
+            <div className={ownerMessage ? "talkAboutTop" : "talkAboutTopOwner"}>
+                <img className={ownerMessage ? "talkAboutImg" : "talkAboutImgOwner"} src={imgUrl} alt=""/>
+                <p className={ownerMessage ? "talkAboutMessage" : "talkAboutMessageOwner"}>{text}</p>          
             </div>
-            <div className={ownerMess ? "talkAboutDate" : "talkAboutDate2"}>{dat}</div>
+            <div className={ownerMessage ? "talkAboutDate" : "talkAboutDateOwner"}>{date}</div>
         </div>
     );
 }
